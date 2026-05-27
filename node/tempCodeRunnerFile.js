@@ -1,0 +1,1 @@
+const conteudo = fs.readFileSync(caminho, 'utf-8')
