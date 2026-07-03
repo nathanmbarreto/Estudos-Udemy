@@ -5,71 +5,51 @@
     <meta charset="UTF-8">
     <title>Desafio Card</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        .cursos {
-            display: flex;
-            gap: 40px;
-            padding-left: 20px;
-        }
-
         .curso {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 310px;
-            width: 270px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            /* float: left; */
+            display: inline-block;
+            vertical-align: top;
+            font-family: Verdana, sans-serif;
+            border: solid 1px #ccc;
+            box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3);
+            height: 300px;
+            width: 260px;
+            margin: 5px 20px;
             padding: 5px;
-            position: relative;
         }
 
         .curso img {
-            display: flex;
             width: 100%;
-            margin: auto;
-
+            max-height: 50%;
         }
 
-        .curso-info {
-            flex-grow: 1;
+        .curso-info{
+            padding: 10px;
+            height: 90px;
             overflow: hidden;
+
         }
 
-        .curso-info h4 {
-            font-family: sans-serif;
-            font-size: 1.42em;
-            margin: 15px;
+        .curso-info h4{
+            font-size: 1.4em;
+            font-weight: 100;
+            margin: 0px;
         }
 
-        .curso-info p {
-            margin: 15px;
-            font-size: 1.2em;
-            white-space: nowrap;
-            overflow: hidden;
+        .curso-preco{
+            float: right;
+            padding: 10px;
         }
 
-        .curso-preco {
-            font-family: Arial, Helvetica, sans-serif;
-            align-self: flex-end;
-            padding: 6px;
-        }
-
-        .curso-preco>.preco-de {
-            color: rgba(209, 0, 0, 0.562);
-            font-weight: bold;
-            font-size: 1.1em;
+        .preco-de{
             text-decoration: line-through;
-            
+            color: firebrick;
         }
 
-        .curso-preco>.preco-por {
+        .preco-por {
             color: green;
-            font-weight: bolder;
-            font-size: 1.50em;
-
+            font-weight: bold;
+            font-size: 1.4em;
         }
     </style>
 </head>
