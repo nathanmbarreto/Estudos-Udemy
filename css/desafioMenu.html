@@ -47,30 +47,32 @@
             margin: 20px 15px;
         }
 
-        .menu {
+        /* .menu {
             display: inline-block;
             vertical-align: top;
             height: 80px;
             padding: 25px;
-        }
+        } */
 
-        .menu ul {
+        /* .menu ul {
             margin: 0;
             padding: 0;
         }
 
         .menu li {
             display: inline-block;
-        }
+        } */
 
         .cabecalho a {
             text-decoration: none;
             color: #eee;
             font-size: 1.3em;
-            
+
         }
 
-        .menu a{ padding: 15px;}
+        .menu a {
+            padding: 15px;
+        }
 
         .autenticacao {
             float: right;
@@ -78,40 +80,62 @@
             padding: 25px;
         }
 
-        .menu a:hover, .menu a.selected{
+        .menu a:hover,
+        .menu a.selected {
             background-color: #4faddb;
             color: black;
         }
 
-        .botao{
+        .botao {
             border-radius: 30px;
             padding: 10px 25px;
             margin: 10px;
         }
 
-        .destaque{
+        .destaque {
             background: #f50a31;
             color: #fff;
         }
 
-        @media(min-width: 679px){
-            .menu-toggle{
+        @media(min-width: 679px) {
+            .menu-toggle {
                 display: none;
             }
         }
 
-        @media (max-width:680px){
+        @media (max-width:680px) {
             .menu {
                 display: none;
             }
         }
 
-        @media(max-width: 910px){
-            .autenticacao{
+        @media(max-width: 910px) {
+            .autenticacao {
                 display: none;
             }
         }
 
+        .cabecalho {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .menu {
+            flex-grow: 10;
+
+        }
+
+        .menu ul {
+            display: flex;
+            /* justify-content: space-around; */
+            list-style: none;
+        }
+
+        .menu li {
+            margin: 0px 10px;
+        }
     </style>
 </head>
 
@@ -148,7 +172,7 @@
     </header>
 
     <script>
-        window.onhashchange = function(e) {
+        window.onhashchange = function (e) {
             const oldURL = e.oldURL.split('#')[1]
             const newURL = e.newURL.split('#')[1]
             const oldMenu = document.querySelector(`.menu [href='#${oldURL}']`)
@@ -156,7 +180,7 @@
             oldMenu && oldMenu.classList.remove('selected')
             newMenu && newMenu.classList.add('selected')
         }
-</script>
+    </script>
 </body>
 
 </html>
